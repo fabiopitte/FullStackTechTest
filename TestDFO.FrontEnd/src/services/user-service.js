@@ -12,8 +12,6 @@ const userService = [
     };
 
     this.create = function(user) {
-      console.log(`${CONFIGS.baseServiceUrl}user`, user);
-
       return $http.post(`${CONFIGS.baseServiceUrl}user`, user);
     };
 
