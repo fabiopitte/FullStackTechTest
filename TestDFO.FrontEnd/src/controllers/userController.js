@@ -45,8 +45,10 @@ const userController = [
 
       promisse
         .then(function(response) {
-          if (response.status === 201) {
+          console.log(response);
+          if (response.status === 200) {
             console.info('User successfully created');
+            $scope.successMessage = 'User created successfully';
             // successfully created, so redirect it to list view
           }
         })
@@ -64,6 +66,7 @@ const userController = [
         .then(function(response) {
           if (response.status === 204) {
             console.info('User successfully updated');
+            $scope.successMessage = 'User updated successfully';
             // successfully created, so redirect it to list view
           }
         })

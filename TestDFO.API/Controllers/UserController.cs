@@ -49,7 +49,7 @@ namespace TestDFO.API.Controllers
                 return BadRequest();
             }
 
-            return CreatedAtAction(nameof(UserViewModel), new { id = _userCreated.Id }, _userCreated);
+            return Ok();
         }
 
         // PUT api/User/5

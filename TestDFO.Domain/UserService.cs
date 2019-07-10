@@ -6,7 +6,7 @@ namespace TestDFO.Domain
 {
     public class UserService : IUserService
     {
-        public static List<User> ListUsers
+        public List<User> ListUsers
         {
             get
             {

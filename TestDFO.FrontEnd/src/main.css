@@ -85,3 +85,9 @@ footer {
   margin-top: 2rem;
   display: block;
 }
+
+.successMessage {
+  color: var(--saveButton);
+  margin-top: 2rem;
+  display: block;
+}
