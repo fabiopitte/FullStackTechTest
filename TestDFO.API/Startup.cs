@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace TestDFO.API
 {
@@ -32,6 +33,23 @@ namespace TestDFO.API
             services.AddCors();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            // Configurando o serviço de documentação do Swagger
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1",
+                    new Info
+                    {
+                        Title = "NET Full Stack Position test",
+                        Version = "v1",
+                        Description = "Tech Test",
+                        Contact = new Contact
+                        {
+                            Name = "Fabio Pitte",
+                            Url = "https://github.com/fabiopitte"
+                        }
+                    });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -54,6 +72,14 @@ namespace TestDFO.API
 
             app.UseHttpsRedirection();
             app.UseMvc();
+
+            // Ativando middlewares para uso do Swagger
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json",
+                    "NET Full Stack Position test");
+            });
         }
     }
 }

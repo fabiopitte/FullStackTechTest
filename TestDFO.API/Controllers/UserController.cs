@@ -54,7 +54,7 @@ namespace TestDFO.API.Controllers
 
         // PUT api/User/5
         [HttpPut("{id}")]
-        public IActionResult Put(int id, UserViewModel userViewModel)
+        public IActionResult Put(int id, [FromBody]UserViewModel userViewModel)
         {
             if (id != userViewModel.Id)
             {
