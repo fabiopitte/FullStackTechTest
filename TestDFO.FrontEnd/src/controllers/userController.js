@@ -45,7 +45,6 @@ const userController = [
 
       promisse
         .then(function(response) {
-          console.log(response);
           if (response.status === 200) {
             console.info('User successfully created');
             $scope.successMessage = 'User created successfully';
