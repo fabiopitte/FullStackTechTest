@@ -24,6 +24,7 @@ namespace TestDFO.Domain
 
             var newUser = User.ValidatedUser.Create(newId, user.Name, user.Age, user.Address);
 
+            // TODO: I have to create a mockup to save this object in memory
             ListUsers.Add(newUser);
 
             return newUser;
@@ -49,6 +50,7 @@ namespace TestDFO.Domain
 
             var newUser = new User(updatedUser.Id, user.Name, user.Age, user.Address);
 
+            // TODO: I have to create a mockup to update this object in memory
             updatedUser = newUser;
 
             return updatedUser;

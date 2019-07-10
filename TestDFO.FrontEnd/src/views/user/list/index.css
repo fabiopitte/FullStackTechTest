@@ -31,6 +31,13 @@ a.modify-user {
   display: inline-block;
   width: 100%;
   text-align: right;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  border-radius: 3px;
+}
+
+a.modify-user:hover {
+  background-color: var(--secondColor);
 }
 
 .search-users {
