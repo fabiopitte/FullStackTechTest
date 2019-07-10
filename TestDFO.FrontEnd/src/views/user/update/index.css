@@ -1,0 +1,39 @@
+form.update-user {
+  display: block;
+  padding: 2rem;
+  border: 1px solid var(--secondColor);
+}
+
+.form-user {
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.form-user input,
+.form-user textarea {
+  width: 100%;
+  padding: 0.9rem;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+.update-user label {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.btn-save {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--saveButton);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.btn-save:hover {
+  cursor: pointer;
+}

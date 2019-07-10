@@ -1,0 +1,18 @@
+<section class="list" ng-init="list()">
+  <h2 class="subtitle">Users</h2>
+  <input
+    type="text"
+    name="search"
+    ng-model="seachText"
+    placeholder="search"
+    class="search-users"
+  />
+  <ul class="user-list">
+    <li ng-repeat="user in users | filter:seachText" data-id="{{ user.id }}">
+      <p>Name: {{ user.name }}</p>
+      <p>Age: {{ user.age }}</p>
+      <p class="address">Address: {{ user.address }}</p>
+      <a class="modify-user" href="/user/{{ user.id }}">modify</a>
+    </li>
+  </ul>
+</section>

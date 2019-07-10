@@ -1,0 +1,46 @@
+ul.user-list {
+  display: block;
+  margin: 1rem;
+  padding: 1rem;
+  list-style: none;
+  font-size: 2rem;
+}
+
+ul.user-list li {
+  border: 1px solid var(--secondColor);
+  margin: 0;
+  padding: 2rem;
+}
+
+ul.user-list li:hover {
+  background-color: var(--hover);
+  position: relative;
+}
+
+p.address {
+  color: #313035;
+  margin-top: 2rem;
+  font-size: 1.6rem;
+  border-top: 1px solid #313035;
+}
+
+a.modify-user {
+  color: var(--tertiaryColor);
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  display: inline-block;
+  width: 100%;
+  text-align: right;
+}
+
+.search-users {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid #b50607;
+  width: 100%;
+  max-width: 600px;
+  outline: none;
+  color: white;
+  font-size: 4rem;
+  margin: 0;
+}
